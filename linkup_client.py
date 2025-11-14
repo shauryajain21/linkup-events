@@ -19,7 +19,7 @@ class LinkupClient:
         Args:
             api_key: Linkup API key. If not provided, will look for LINKUP_API_KEY env variable.
         """
-        self.api_key = api_key or os.getenv("LINKUP_API_KEY")
+        self.api_key = (api_key or os.getenv("LINKUP_API_KEY", "")).strip()
         if not self.api_key:
             raise ValueError("Linkup API key must be provided or set in LINKUP_API_KEY environment variable")
 
