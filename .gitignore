@@ -14,3 +14,4 @@ debug_*.py
 *.swo
 .vscode/
 .idea/
+.vercel
